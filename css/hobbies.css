@@ -1,0 +1,54 @@
+/*
+ * todos os elemento da minha no css*
+*/
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+
+.container {
+    width: 90%; /* largura da janela*/
+    max-width: 1200px; /* maximo de largura que sporta para exibir o conteudo*/
+    margin: 0 auto; /* centralizar o conteudo no meio da pagina */
+    padding: 2rem 0; /* margens no interior da pagina */ 
+}
+
+.introducao-hobbies{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.introducao-hobbies h2{
+    margin-bottom: .75rem;
+    font-size: 2rem;
+}
+
+.introducao-hobbies p{
+    background-color: aqua;
+}
+
+.titulo-galeria{
+    flex-basis: 100%;
+    margin-bottom:  .5rem;
+    font-size: 1.5rem; 
+}
+/* é o card */
+.galeria-hobbies{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: stretch;
+
+}
+
+.cartao-hobby img{
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
