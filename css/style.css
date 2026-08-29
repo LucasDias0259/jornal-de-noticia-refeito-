@@ -1,141 +1,89 @@
-body{
-    margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    font-family: Arial, Helvetica, sans-serif;
+/*
+
+*/
+* {
+ box-sizing: border-box; 
 }
 
-body > header {
-    background-color: #173b82;
-    color: #fff;
-    text-align: center;
-    padding: 35px;
-}
-body > header > h1{
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-/* criando estilos para o meu menu*/
-nav > ul {
-    padding: 0;
-    list-style: none;
+.container {
+    width: 90%; /* largura da minha janela */
+    max-width: 1200px; /* máximo de largura que suporta para exibir o conteudo */
+    margin: 0 auto; /* centralizar o conteudo no meio da página */
+    padding: 2rem 0; /* margens no interior da página */
 }
 
-nav li{
-    display: inline;
-    margin: 10px;
+.introducao-hobbies {
+    margin-bottom: 2rem; /* margem inferior */
+    text-align: center; /* centralizar o texto */
 }
 
-nav a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.introducao-hobbies h2 {
+    margin-bottom: .75rem; /* margem inferior */
+    font-size: 2rem; /* tamanho da fonte */
 }
 
-/* hover passar sobre o texto e mostrara a cor amarela*/
-nav a:hover{
-    text-decoration: none;
-    color: yellow;
-    border: 4px solid #ddd;
-    border-radius: 10px;
+.introducao-hobbies p {
+    max-width: 700px;  /* largura máxima permitida para esse conteudo */
+    margin: 0 auto; /* centralizar o conteudo */
+    line-height: 1.6; /*espaçamento entre as linhas*/
 }
 
-body > header > p{
-    padding: 15px;
-    
+/* todo o conteudo do meu card */
+.titulo-galeria {
+    flex-basis: 100%;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
 }
 
-main {
-    max-width: 960px;
-    margin: 30px auto;
-    padding: 0 20px;
+/* 
+    é o card que acabamos de fazer ele identificar que todos os elementos 
+    filhos irão quebrar conforme o dispositivo for menor que a capacidade da largura
+*/
+.galeria-hobbies {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: stretch;
 }
 
-section > header {
-    margin-bottom: 25px;
-    text-align: center;
+.cartao-hobby {
+    flex: 1 1 280px; /*informando qual é o padrão de orientação dos meus cards */
+    overflow: hidden;
+    border: 1px solid #d8d8d8;
+    border-radius: .75rem;
+    background-color: #fff;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.812);
 }
 
-section > header h3 {
-    color: #173b82;
-    margin-top: 35px;
-    margin-bottom: 35px;
-    font-size: 32px;
-}
-.imagem-publicacao{
-    margin: 20px 0;
-
-}
-.imagem-publicacao img{
-    display: block;
+.cartao-hobby img {
+    display: block; 
     width: 100%;
-    height: auto;
-    border: 4px solid black;
-
+    height: 220px;
+    object-fit: cover;
 }
 
-.imagem-publicacao figcaption{
-    background-color: #eee;
-    color: #666;
-    font-size: 0.9em;
-    padding: 10px;
-    text-align: center;
+.cartao-hobby figcaption {
+    padding: .5rem 1rem;
+    background-color: #f1f1f1;
+    color: #555;
+    font-size: .875rem;
 }
 
-main > section{
-    border: 4px solid #ddd;
-    border-radius: 10px;
-    margin: 10px;
+.conteudo-cartao {
+    padding: 1.25rem;
 }
 
-/*css para minha figure*/
-img{
-    display: block;
-    width: 100%;
-    height: auto;
+.conteudo-cartao h3{
+    margin-bottom: .75rem;
+    font-size: 1.4rem;
 }
 
-figcaption{
-    background-color: #eee;
-    color: #666;
-    font-size: 0.9em;
-    padding: 10px;
-    text-align: center;
-    border: 4px solid black;
-    border-radius: 10px;
-}
-
-article img {
-    width: 100%;
-    margin: 15px 0;
-}
-
-article p{
+.conteudo-cartao p {
     line-height: 1.6;
 }
 
-.categoria{
-    color: #3169d8;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.substitulo{
+.data-publicacao {
+    margin-top: 1rem;
     color: #666;
-    font-size: 18px;
-}
-
-article footer{
-    border-top: 1px solid #ddd;
-    color: #666;
-    font-size: 14px;
-    margin-top: 20px;
-    padding-top: 10px;
-}
-
-body > footer{
-    background-color: #102563;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    font-size: .875rem;
 }
