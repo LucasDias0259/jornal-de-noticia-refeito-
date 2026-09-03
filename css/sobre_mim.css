@@ -1,0 +1,312 @@
+/* ===== PÁGINA DE PERFIL - ESTILOS ESPECÍFICOS ===== */
+
+/* Cabeçalho do perfil */
+.cabecalho-perfil {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+/* Imagem de capa */
+.imagem-capa {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+.imagem-capa img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Área de apresentação do perfil com Flexbox */
+.apresentacao-perfil {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Foto de perfil */
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    flex-shrink: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: -70px;
+}
+
+.foto-perfil img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Informações do perfil */
+.informacoes-perfil {
+    flex: 1;
+    min-width: 250px;
+}
+
+.informacoes-perfil h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.profissao {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.25rem;
+}
+
+.localizacao {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 1rem;
+}
+
+/* Badges de tecnologias */
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: 2px solid #a0a0ff;
+    color: #5555cc;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Conteúdo principal em duas colunas */
+.conteudo-perfil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.coluna-principal {
+    flex: 1;
+    min-width: 300px;
+}
+
+.coluna-lateral {
+    flex: 0 1 300px;
+}
+
+/* Seções genéricas */
+.secao {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.secao h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.secao p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Itens de formação */
+.item-formacao {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.item-formacao:last-child {
+    margin-bottom: 0;
+}
+
+.icone-formacao {
+    width: 50px;
+    height: 50px;
+    background-color: #d0d0d0;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.item-formacao h4 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.item-formacao p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.periodo {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 0;
+}
+
+/* Lista de competências */
+.lista-competencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.competencia {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    color: #666;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border: 1px solid #e0e0e0;
+}
+
+/* Lista de interesses */
+.lista-interesses {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-interesses li {
+    padding: 0.75rem 0;
+    color: #666;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.lista-interesses li:last-child {
+    border-bottom: none;
+}
+
+.lista-interesses li:before {
+    content: "• ";
+    color: #a0a0ff;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets e telas pequenas */
+@media (max-width: 768px) {
+    .apresentacao-perfil {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .foto-perfil {
+        margin-top: -60px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .informacoes-perfil h2 {
+        font-size: 1.5rem;
+    }
+
+    .conteudo-perfil {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .coluna-lateral {
+        flex: 1;
+    }
+
+    .secao {
+        padding: 1.5rem;
+    }
+
+    .imagem-capa {
+        height: 150px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    .apresentacao-perfil {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .foto-perfil {
+        width: 80px;
+        height: 80px;
+        margin-top: -40px;
+    }
+
+    .informacoes-perfil h2 {
+        font-size: 1.3rem;
+    }
+
+    .informacoes-perfil {
+        min-width: 100%;
+    }
+
+    .badges {
+        gap: 0.5rem;
+    }
+
+    .badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .secao {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .secao h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .imagem-capa {
+        height: 120px;
+    }
+
+    .item-formacao {
+        gap: 1rem;
+    }
+
+    .icone-formacao {
+        width: 40px;
+        height: 40px;
+    }
+
+    .lista-competencias {
+        gap: 0.5rem;
+    }
+
+    .competencia {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
