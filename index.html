@@ -34,6 +34,81 @@
                 </ul>
             </nav>
         </header>
+
+    <div class="container">
+        <div class="filtro-container">
+            <!-- Campo de busca -->
+            <input
+                type="text"
+                class="busca-input"
+                placeholder="Digite uma palavra-chave"
+                aria-label="Buscar publicação"
+            >
+
+            <!-- Dropdown Categoria -->
+            <select class="dropdown" aria-label="Selecionar categoria">
+                <option value="">Todas as categorias</option>
+                <option value="web">Web Development</option>
+                <option value="mobile">Mobile</option>
+                <option value="dados">Dados</option>
+                <option value="ia">Inteligência Artificial</option>
+            </select>
+
+            <!-- Dropdown Tecnologia -->
+            <select class="dropdown" aria-label="Selecionar tecnologia">
+                <option value="">Todas as tecnologias</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="react">React</option>
+            </select>
+
+            <!-- Botão Filtrar -->
+            <button class="btn-filtrar">Filtrar notícias</button>
+        </div>
+    </div>
+
+    <script>
+        // Seleciona os elementos
+        const buscaInput = document.querySelector('.busca-input');
+        const dropdownCategoria = document.querySelectorAll('.dropdown')[0];
+        const dropdownTecnologia = document.querySelectorAll('.dropdown')[1];
+        const btnFiltrar = document.querySelector('.btn-filtrar');
+
+        // Evento do botão filtrar
+        btnFiltrar.addEventListener('click', function() {
+            const termo = buscaInput.value.trim();
+            const categoria = dropdownCategoria.value;
+            const tecnologia = dropdownTecnologia.value;
+
+            console.log({
+                busca: termo,
+                categoria: categoria,
+                tecnologia: tecnologia
+            });
+
+            filtrarNoticias(termo, categoria, tecnologia);
+        });
+
+        // Função para filtrar notícias
+        function filtrarNoticias(termo, categoria, tecnologia) {
+            const filtros = {
+                busca: termo,
+                categoria: categoria,
+                tecnologia: tecnologia
+            };
+
+            console.log('Aplicando filtros:', filtros);
+        }
+
+        // Permitir busca ao pressionar Enter
+        buscaInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                btnFiltrar.click();
+            }
+        });
+    </script>
         <!-- inicio do meu conteudo de hobbies -->
          <!-- responsavel por centralizar o conteudo no centro da página -->
         <main class="container">
